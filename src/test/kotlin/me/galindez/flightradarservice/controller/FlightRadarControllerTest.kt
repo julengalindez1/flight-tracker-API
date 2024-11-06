@@ -33,7 +33,6 @@ class FlightRadarControllerTest {
     @BeforeEach
     fun setUp() {
         `when`(aviationStackApiDependency.getFlightsData()).thenReturn(TestUtils.createFlightDataForMockTest())
-        //`when`(homeAssigmentApiClientMock.getVenueData(VenueSlugEnum.BERLIN)).thenReturn(null)
     }
 
     @Test
