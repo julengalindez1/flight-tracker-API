@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="json-stdout" target="SYSTEM_OUT">
+            <JsonLayout properties="true" complete="false" compact="true" stacktraceAsString="false" eventEol="true" includeTimiMillis="true">
+                <KeyValuePair key="appName" value="flight-radar-service"/>
+            </JsonLayout>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <!-- Specific Logger for package -->
+        <Logger name="me.galindez" level="debug"/>
+        <Logger name="me.galindez.flightradarservice" level="debug"/>
+
+        <!-- Root Logger -->
+        <Root level="info" includeLocation="true">
+            <AppenderRef ref="json-stdout" />
+        </Root>
+    </Loggers>
+</Configuration>
