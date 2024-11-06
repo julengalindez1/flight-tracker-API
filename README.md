@@ -28,17 +28,24 @@ java -jar target/flight-radar-service-0.0.1-SNAPSHOT.jar
 ```
 ## System 
 
-# Sequence Diagram
+@startuml
+box "Frontend (not yet implemented)"
+participant Client
+end
+box "Green Application"
+participant FlightTrackerService as "Flight-tracker-service"
+end
+box "Dependencies"
+participant AviationStackAPI as "Aviation Stack API"
+end
 
-` ```mermaid `
-sequenceDiagram
-    participant SystemOne
-    participant SystemTwo
-
-    Flight Tracker API->>Aviationstack API: GET /api/v1/flights
-    Aviationstack API-->>Flight Tracker API: 200 OK
-    
-    ` ``` `
+Client -> FlightTrackerService: GET /api/v1/flights/all
+par
+FlightTrackerService -> AviationStackAPI: GET /v1/flights
+AviationStackAPI --> FlightTrackerService: Flight data
+end
+FlightTrackerService --> Client: Flight information
+@enduml
 
 
 
