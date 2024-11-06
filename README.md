@@ -26,6 +26,21 @@ or run the JAR from target folder:
 ```
 java -jar target/flight-radar-service-0.0.1-SNAPSHOT.jar
 ```
+## System 
+
+# Sequence Diagram
+
+` ```mermaid `
+sequenceDiagram
+    participant SystemOne
+    participant SystemTwo
+
+    Flight Tracker API->>Aviationstack API: GET /api/v1/flights
+    Aviationstack API-->>Flight Tracker API: 200 OK
+    
+    ` ``` `
+
+
 
 ## Endpoints
 
@@ -64,7 +79,7 @@ http://localhost:8080/api/v1/flights
             "icao": "ICAO Code",
             "terminal": "Terminal Number",
             "gate": "Gate Number",
-            "delay": 0, // Delay in minutes
+            "delay": 0,
             "scheduled": "2019-12-12T04:20:00+00:00",
             "estimated": "2019-12-12T04:20:00+00:00",
             "actual": "2019-12-12T04:20:00+00:00",
@@ -79,7 +94,7 @@ http://localhost:8080/api/v1/flights
             "terminal": "Terminal Number",
             "gate": "Gate Number",
             "baggage": "Baggage Claim Gate",
-            "delay": 0, // Delay in minutes
+            "delay": 0,
             "scheduled": "2019-12-12T04:20:00+00:00",
             "estimated": "2019-12-12T04:20:00+00:00",
             "actual": "2019-12-12T04:20:00+00:00",
@@ -141,7 +156,7 @@ http://localhost:8080/api/v1/flights
             "icao": "ICAO Code",
             "terminal": "Terminal Number",
             "gate": "Gate Number",
-            "delay": 0, // Delay in minutes
+            "delay": 0,
             "scheduled": "2019-12-12T04:20:00+00:00",
             "estimated": "2019-12-12T04:20:00+00:00",
             "actual": "2019-12-12T04:20:00+00:00",
@@ -156,7 +171,7 @@ http://localhost:8080/api/v1/flights
             "terminal": "Terminal Number",
             "gate": "Gate Number",
             "baggage": "Baggage Claim Gate",
-            "delay": 0, // Delay in minutes
+            "delay": 0,
             "scheduled": "2019-12-12T04:20:00+00:00",
             "estimated": "2019-12-12T04:20:00+00:00",
             "actual": "2019-12-12T04:20:00+00:00",
@@ -235,6 +250,8 @@ http://localhost:8080/api/v1/flights
 - Reason: Missing or invalid parameters.
 - Status Code: 404 Not Found
 - Reason: No flights found within the specified radius.
+
+
 
 
 
