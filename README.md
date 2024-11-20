@@ -3,8 +3,8 @@
 ## Intro to the project
 Ongoing small API project to play around with Kotlin.
 ##### Next steps:
-###### Helm chart for deploying the app into local Kubernetes cluster
-##### Build a FE with Next.js to display flight stats
+- **Helm chart:** for deploying the app into local Kubernetes cluster
+- **Build a FE:** use Next.js to display flight stats into an interface
 
 ## Overview
 
